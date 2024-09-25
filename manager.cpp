@@ -16,7 +16,7 @@ void printDirs(){
 	
 	while(entry!=NULL){
 		if(entry->d_type == DT_DIR){
-			if(strcmp(entry->d_name,".") && strcmp(entry->d_name,"..")){
+			if(strcmp(entry->d_name,".") && strcmp(entry->d_name,"..") && strcmp(entry->d_name,".git")){
 			printw("%s\n\n",entry->d_name);
 		}}
 	entry = readdir(dir);	
