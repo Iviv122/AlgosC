@@ -9,6 +9,7 @@
 
 using namespace std;
 
+
 void printDirs(){
 
 	DIR *dir = opendir(".");
