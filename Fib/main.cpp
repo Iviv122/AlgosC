@@ -19,6 +19,7 @@ unsigned long long int fib_i(int x){
 	int i=2;
 	while(i<=x){
 		answers.push_back(answers[i] = answers[i-1]+answers[i-2]);
+		cout << "fib(" << i << ")" <<answers[i] << endl; 
 		i++;
 	}
 	return answers[x];
@@ -27,16 +28,16 @@ unsigned long long int fib_i(int x){
 
 int main(){
 	int fiba,answer;
-	cout << "Write fib num:"
+	cout << "Write fib num:";
 	cin >> fiba;
-	cout << "Iteration - 1 Reqursive - 0"
+	cout << "Iteration - 1 Reqursive - 0 ";
 	cin >> answer;
 	if(answer == 1){
 		fib_i(fiba);
 	}
 	else{
 	for(int i=0;i<= fiba;i++){
-		cout << "fib(" << i << ")" <<fib_i(i) << endl; // 45 problems
+		cout << "fib(" << i << ")" <<fib_i(i) << endl; 
 	}
 	}
 }
