@@ -49,7 +49,7 @@ void exec(string folderName){
 
 	string exec = filePathEXEC.string();
 
-	string make = "make -C" + folderName; 
+	string make = "make -C " + folderName; 
 	
 
 	int result = system(make.c_str());
