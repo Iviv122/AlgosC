@@ -19,10 +19,7 @@ unsigned long long int fib_i(int x){
 	int i=2;
 	while(i<=x){
 		answers.push_back(answers[i] = answers[i-1]+answers[i-2]);
-<<<<<<< HEAD
-=======
 		cout << "fib(" << i << ")" <<answers[i] << endl; 
->>>>>>> origin
 		i++;
 	}
 	return answers[x];
