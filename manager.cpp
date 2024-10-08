@@ -26,6 +26,7 @@ void printDirs(){
 			i++;
 			if(i== columns){
 				printw("\n");
+				i = 0;
 			}
 		}}
 	entry = readdir(dir);	
