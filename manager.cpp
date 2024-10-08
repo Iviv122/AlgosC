@@ -7,6 +7,8 @@
 #include <dirent.h>
 #include <cstring>
 
+#define columns 5
+
 using namespace std;
 
 
@@ -15,14 +17,20 @@ void printDirs(){
 	DIR *dir = opendir(".");
 	struct dirent *entry  =readdir(dir);
 	
+	int i = 0 ;
+
 	while(entry!=NULL){
 		if(entry->d_type == DT_DIR){
 			if(strcmp(entry->d_name,".") && strcmp(entry->d_name,"..") && strcmp(entry->d_name,".git")){
-			printw("%s\n\n",entry->d_name);
+			printw("%s ",entry->d_name);
+			i++;
+			if(i== columns){
+				printw("\n");
+			}
 		}}
 	entry = readdir(dir);	
 	}
-	printw("----------\n");
+	printw("\n----------\n");
 	free(entry);
 	closedir(dir);
 }
